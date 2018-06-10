@@ -1,0 +1,12 @@
+html
+p
+ul
+li
+strong
+em
+div
+span
+style
+img
+a
+ol
