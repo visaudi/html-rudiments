@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    #block {
+        background-color: red;
+        width: 100px;
+        height: 80px;
+    }
+
+    body {
+        background-color: black;
+    }
+</style>
+    <body>
+        <div id = "block"></div>
+        <script>
+            const block = document.getElementById("block");
+            document.addEventListener("keypress",function(event){
+                console.log(event);  				
+            });
+        </script>
+    </body>
+</html>
