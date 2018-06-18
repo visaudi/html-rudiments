@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    #block {
+        background-color: red;
+        height: 80px;
+        position: fixed;
+        width: 100px;
+    }
+
+    body {
+        background-color: black;
+    }
+</style>
+    <body>
+        <div id = "block"></div>
+        <script>
+            const block = document.getElementById("block");
+            let blockLocation = 0;
+            block.style.left = "0px";
+            document.addEventListener("keypress",function(event){
+                blockLocation += 5;
+                block.style.left = blockLocation + "px";
+                console.log(event);  				
+            });
+        </script>
+    </body>
+</html>
