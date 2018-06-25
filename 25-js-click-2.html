@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    #block {
+        height: 80px;
+        position: fixed;
+        width: 100px;
+    }
+    body {
+        background-color: black;
+    }
+</style>
+    <body>
+        <div id = "block"></div>
+        <script>
+            let block = document.getElementById("block");
+            block.style.backgroundColor = "red";
+            let blockLocation = 0;
+            block.style.left = "0px";
+            document.addEventListener("keypress",function(event){
+                blockLocation += 5;
+                block.style.left = blockLocation + "px";
+                console.log(event);                 
+            });
+            document.addEventListener("click",function(event){
+                
+                console.log(block.style.backgroundColor === "red");
+                if(block.style.backgroundColor === "red") {
+                    console.log("here");
+                    block.style.backgroundColor = "yellow";
+                    return;
+                }
+                if(block.style.backgroundColor === "yellow") {
+                    block.style.backgroundColor = "blue";
+                    return;
+                }
+                 if(block.style.backgroundColor === "blue") {
+                    block.style.backgroundColor = "red";
+                    return;
+                }
+            }); 
+        </script>
+    </body>
+</html>
+
