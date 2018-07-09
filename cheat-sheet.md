@@ -11,10 +11,10 @@ What every HTML Document must have: 
 </html>`
 
 A DOCTYPE lets our browser know what html rules it should expect
-<html> is the container of the everything
-<head> is the container for invisible important things such as: metadata (like the title of your web page), external files and special rules
-<body> represents what we shall actually see displayed on our website.
-Any element that you want to add to a web page must be enclosed within the <body></body> tag
+html is the container of the everything
+head is the container for invisible important things such as: metadata (like the title of your web page), external files and special rules
+body represents what we shall actually see displayed on our website.
+Any element that you want to add to a web page must be enclosed within the tag
 
 This is how you specify comments in html code. Comments can be anything - additional information to explain what your code does, what a particular element is going to be used for etc.
 
@@ -26,27 +26,26 @@ A paragraph tag will keep a series of sentences together.
 `<p>This is a paragraph</p>`
 <p>Multiple paragraphs will have space between them.<p>`
 
-Sometimes you may want to stress the importance of certain words for which you can use the <strong> tag
+Sometimes you may want to stress the importance of certain words for which you can use the strong tag
 `<p><strong>Caution:</strong> Before proceeding, make sure you have your coding helmet on</p>`
 
-Sometimes you may want to place emphasis on specific words, for which you can use the <em> tag
-<p>I <em>love</em> coding!</p>`
+Sometimes you may want to place emphasis on specific words, for which you can use the em tag
+`<p>I <em>love</em> coding!</p>`
 
 You can group sections of your html page in a div container which you can then apply styling to.
-This container can hold any kind of content such a <p>
+This container can hold any kind of content such a p
 `<div>A div is a container where you can put other stuff. This creates a new block</div>`
 
-The <span> is an inline generic container usually used to group elements together for styling purposes
+The span is an inline generic container usually used to group elements together for styling purposes
 `<p>This is a paragraph with <span>a span which is like a div, but is inline</span> which means it doesn't make a new block.</p>`
 
-The <img> tag can be used to insert images into your web page
-<img src="http://placekitten.com/200/300" /></img>
+The img tag can be used to insert images into your web page
+`<img src="http://placekitten.com/200/300"/></img>`
 
-If we want to change how things look we can move style in between the <head></head> tags:
+The a element allows you to add links to other web pages:
+`<a href="http://www.google.com/">A link will take us somewhere else.</a>`
 
-The <a> element allows you to add links to other web pages:
-<a href="http://www.google.com/">A link will take us somewhere else.</a>
-
+If we want to change how things look we can move style in between the head tags:
 
 `<head>
     <style>
