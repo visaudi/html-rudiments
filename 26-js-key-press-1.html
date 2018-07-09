@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    #block1 {
+        background-color: red;
+        height: 80px;
+        position: fixed;
+        width: 100px;
+    }
+    #block2 {
+        background-color: orange;
+        height: 80px;
+        position: fixed;
+        width: 100px;
+    }
+    
+
+    body {
+        background-color: black;
+    }
+</style>
+    <body>
+        <div id = "block1"></div>
+        <div id = "block2"></div>
+        <script>
+            const block = document.getElementById("block1");
+            const blockLocation = {
+                x: 0,
+                y: 0
+            };
+
+            block.style.left = blockLocation.x + "px";
+            document.addEventListener("keypress",function(event){
+                blockLocation.x += 5;
+                block.style.left = blockLocation.x + "px";
+                console.log(event);  				
+            });
+        </script>
+    </body>
+</html>
