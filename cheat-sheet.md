@@ -2,8 +2,7 @@ Coding Club Cheat Sheet
 
 What every HTML Document must have: 
 
-`<!DOCTYPE html>
-<html>
+`<html>
     <head>
     </head>
     <body>
@@ -129,8 +128,7 @@ Some other styling parameters to play around with:
 
 **Border**
 
-`<!DOCTYPE html>
-<html>
+`<html>
     <head>
         <style>
             div {
@@ -183,8 +181,7 @@ Some other styling parameters to play around with:
 
 **Font-family**
 
-`<!DOCTYPE html>
-<html>
+`<html>
     <head>
         <style>
             div.monospace {
