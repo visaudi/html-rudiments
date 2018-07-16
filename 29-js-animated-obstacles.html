@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    #block1 {
+        background-color: red;
+        height: 80px;
+        position: fixed;
+        width: 100px;
+    }
+    #block2 {
+        background-color: orange;
+        height: 80px;
+        position: fixed;
+        width: 100px;
+    }
+
+    #obstacle1 {
+        height: 160px;
+        position: fixed;   
+        width: 10px;
+    }
+
+    #obstacle2 {
+        height: 140px;
+        position: fixed;
+        width: 10px;
+    }    
+
+    #obstacle3 {
+        height: 100px;
+        position: fixed;
+        width: 10px;
+    }
+
+    img {
+        height: 80px;
+        position: fixed;
+        width: 100px;
+    }
+    
+    body {
+        background-color: black;
+    }
+    </style>
+    <body onload="animate()">
+        <div id = "block1"><img id = "img1" src="https://placeimg.com/640/480/animals"></img></div>
+        <div id = "block2"><img id = "img2" src = "https://placeimg.com/330/380/animals"></img></div>
+        <div id = "obstacle1"></div>
+        <div id = "obstacle2"></div>
+        <div id = "obstacle3"></div>
+
+         <script>
+            o1 = document.getElementById("obstacle1");
+            o2 = document.getElementById("obstacle2");
+            o3 = document.getElementById("obstacle3");
+
+            o1.style.backgroundColor = "yellow";
+            
+            o2.style.bottom = 280 + "px";
+            o2.style.backgroundColor = "green";
+            
+            o3.style.bottom = 40 + "px";
+            o3.style.backgroundColor = "blue";           
+            
+            function animate() {
+                var elem1 = document.getElementById("obstacle1");
+                var elem2 = document.getElementById("obstacle2");   
+                var elem3 = document.getElementById("obstacle3");
+
+                var pos = 0;  
+                setInterval(moveObstacles, 30);
+                function moveObstacles() {
+                        pos++; 
+                        elem1.style.right = pos + "px"; 
+                        elem2.style.right = pos + "px";
+                        elem3.style.right = pos + "px";
+                }
+            }
+ 
+            const block = document.getElementById("block1");
+            const blockLocation = {
+                x: 0,
+                y: 0
+            };
+
+            const block2 = document.getElementById("block2");
+            const blockLocation2 = {
+                x: 0,
+                y: 380
+            };
+                
+            block.style.left = blockLocation.x + "px";
+            block.style.top = blockLocation.y + "px";
+            block2.style.left = blockLocation2.x + "px";
+            block2.style.top = blockLocation2.y + "px";
+            document.addEventListener("keypress",function(event){
+                event.preventDefault();
+                if (event.key === "d") {
+                    blockLocation.x += 5;
+                    block.style.left = blockLocation.x + "px";
+                }
+                if (event.key === "a") {
+                    blockLocation.x -= 5;
+                    block.style.left = blockLocation.x + "px";
+                }
+                if (event.key === "s") {
+                    blockLocation.y += 5;
+                    block.style.top = blockLocation.y + "px";
+                }
+                if (event.key === "w") {
+                    blockLocation.y -= 5;
+                    block.style.top = blockLocation.y + "px";
+                }
+                if (event.key === "l") {
+                    blockLocation2.x += 5;
+                    block2.style.left = blockLocation2.x + "px";
+                }
+                if (event.key === "j") {
+                    blockLocation2.x -= 5;
+                    block2.style.left = blockLocation2.x + "px";
+                }
+                if (event.key === "k") {
+                    blockLocation2.y += 5;
+                    block2.style.top = blockLocation2.y + "px";
+                }
+                if (event.key === "i") {
+                    blockLocation2.y -= 5;
+                    block2.style.top = blockLocation2.y + "px";
+                }
+                console.log(event);  				
+            });
+            
+        </script>
+    </body>
+</html>
